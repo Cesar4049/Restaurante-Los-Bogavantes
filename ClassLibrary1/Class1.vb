@@ -53,4 +53,53 @@ Public Class Class1
         cnx.Close()
         Return actu1
     End Function
+
+    Public Function ListarInventario() As DataTable
+        Dim de As New SqlDataAdapter("pb_listarInv", cnx)
+        Dim tblI As New DataTable
+        de.Fill(tblI)
+        Return tblI
+    End Function
+
+    Public Function InsertarInv(nompro As String, cant As String)
+        Dim de As New SqlCommand("pb_nuevoInv", cnx)
+        de.CommandType = CommandType.StoredProcedure
+        de.Parameters.AddWithValue("@Producto", nompro)
+        de.Parameters.AddWithValue("@Cantidad", cant)
+
+        cnx.Open()
+        Dim respI As Integer
+        Try
+            respI = de.ExecuteNonQuery
+            cnx.Close()
+
+        Catch ex As Exception
+            MsgBox("Error al registrar Inventario")
+        End Try
+        Return respI
+    End Function
+
+    Public Function EliminarInv(codigoinv As String)
+        Dim elimI As New SqlCommand("pb_eliminarInv", cnx)
+        elimI.CommandType = CommandType.StoredProcedure
+        elimI.Parameters.AddWithValue("@codigoInv", codigoinv)
+        cnx.Open()
+        Dim elim2 As String = elimI.ExecuteNonQuery
+        cnx.Close()
+        Return elim2
+    End Function
+
+    Public Function ModificarInv(codigoinven As String, nombrep As String, cantidad As String) As Integer
+        Dim actI As New SqlCommand("pb_mdificarInv", cnx)
+        actI.CommandType = CommandType.StoredProcedure
+        actI.Parameters.AddWithValue("@codigoInv", codigoinven)
+        actI.Parameters.AddWithValue("@Nombre", nombrep)
+        actI.Parameters.AddWithValue("@Cantidad", cantidad)
+
+        cnx.Open()
+        Dim actu2 As String = actI.ExecuteNonQuery
+        cnx.Close()
+        Return actu2
+    End Function
+
 End Class
