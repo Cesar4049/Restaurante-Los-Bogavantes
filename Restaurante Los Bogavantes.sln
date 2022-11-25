@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Restaurante Los Bogavantes", "Restaurante Los Bogavantes\Restaurante Los Bogavantes.vbproj", "{53610EDC-B28C-4DEA-BD8B-5D2C2AEA0DED}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.vbproj", "{5DE24DBB-A3B8-40D4-AA4E-8AB45C617B6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{53610EDC-B28C-4DEA-BD8B-5D2C2AEA0DED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53610EDC-B28C-4DEA-BD8B-5D2C2AEA0DED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53610EDC-B28C-4DEA-BD8B-5D2C2AEA0DED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DE24DBB-A3B8-40D4-AA4E-8AB45C617B6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DE24DBB-A3B8-40D4-AA4E-8AB45C617B6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DE24DBB-A3B8-40D4-AA4E-8AB45C617B6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DE24DBB-A3B8-40D4-AA4E-8AB45C617B6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
