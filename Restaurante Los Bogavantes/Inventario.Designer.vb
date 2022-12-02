@@ -27,13 +27,15 @@ Partial Class Inventario
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.lblInv = New System.Windows.Forms.Label()
-        Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.lblInv = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtRestaurante = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -49,7 +51,7 @@ Partial Class Inventario
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(46, 49)
+        Me.Label1.Location = New System.Drawing.Point(7, 49)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(141, 29)
         Me.Label1.TabIndex = 1
@@ -58,7 +60,7 @@ Partial Class Inventario
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(260, 49)
+        Me.Label2.Location = New System.Drawing.Point(167, 49)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(103, 29)
         Me.Label2.TabIndex = 2
@@ -67,7 +69,7 @@ Partial Class Inventario
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(449, 49)
+        Me.Label3.Location = New System.Drawing.Point(327, 49)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(116, 29)
         Me.Label3.TabIndex = 3
@@ -75,6 +77,8 @@ Partial Class Inventario
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.txtRestaurante)
+        Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.txtCantidad)
         Me.GroupBox1.Controls.Add(Me.txtNombre)
         Me.GroupBox1.Controls.Add(Me.lblInv)
@@ -84,32 +88,32 @@ Partial Class Inventario
         Me.GroupBox1.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(99, 22)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(612, 162)
+        Me.GroupBox1.Size = New System.Drawing.Size(645, 162)
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
+        '
+        'txtCantidad
+        '
+        Me.txtCantidad.Location = New System.Drawing.Point(323, 95)
+        Me.txtCantidad.Name = "txtCantidad"
+        Me.txtCantidad.Size = New System.Drawing.Size(120, 35)
+        Me.txtCantidad.TabIndex = 6
+        '
+        'txtNombre
+        '
+        Me.txtNombre.Location = New System.Drawing.Point(147, 95)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(140, 35)
+        Me.txtNombre.TabIndex = 5
         '
         'lblInv
         '
         Me.lblInv.AutoSize = True
-        Me.lblInv.Location = New System.Drawing.Point(101, 95)
+        Me.lblInv.Location = New System.Drawing.Point(62, 95)
         Me.lblInv.Name = "lblInv"
         Me.lblInv.Size = New System.Drawing.Size(21, 29)
         Me.lblInv.TabIndex = 4
         Me.lblInv.Text = "-"
-        '
-        'txtNombre
-        '
-        Me.txtNombre.Location = New System.Drawing.Point(223, 95)
-        Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(175, 35)
-        Me.txtNombre.TabIndex = 5
-        '
-        'txtCantidad
-        '
-        Me.txtCantidad.Location = New System.Drawing.Point(445, 95)
-        Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.Size = New System.Drawing.Size(120, 35)
-        Me.txtCantidad.TabIndex = 6
         '
         'Button1
         '
@@ -151,6 +155,22 @@ Partial Class Inventario
         Me.Button4.Text = "Nuevo"
         Me.Button4.UseVisualStyleBackColor = True
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(478, 49)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(163, 29)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "#Restaurante"
+        '
+        'txtRestaurante
+        '
+        Me.txtRestaurante.Location = New System.Drawing.Point(492, 89)
+        Me.txtRestaurante.Name = "txtRestaurante"
+        Me.txtRestaurante.Size = New System.Drawing.Size(120, 35)
+        Me.txtRestaurante.TabIndex = 8
+        '
         'Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -184,4 +204,6 @@ Partial Class Inventario
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
+    Friend WithEvents txtRestaurante As TextBox
+    Friend WithEvents Label4 As Label
 End Class

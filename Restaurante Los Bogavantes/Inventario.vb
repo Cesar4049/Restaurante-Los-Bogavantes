@@ -1,27 +1,29 @@
-﻿Imports ClassLibrary1
+﻿Imports ClassLibrary3
 Public Class Inventario
 
-    Dim obj As New Class1
+    Dim objeto As New Class3
 
     Private Sub Inventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        DataGridView1.DataSource = obj.ListarInventario
+        DataGridView1.DataSource = objeto.ListardeInventario
 
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         lblInv.Text = DataGridView1.Item(0, e.RowIndex).Value
-        txtNombre.Text = DataGridView1.Item(1, e.RowIndex).Value
-        txtCantidad.Text = DataGridView1.Item(2, e.RowIndex).Value
+        txtRestaurante.Text = DataGridView1.Item(1, e.RowIndex).Value
+        txtNombre.Text = DataGridView1.Item(2, e.RowIndex).Value
+        txtCantidad.Text = DataGridView1.Item(3, e.RowIndex).Value
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
-            obj.InsertarInv(txtNombre.Text, txtCantidad.Text)
-            DataGridView1.DataSource = obj.ListarInventario
-            MsgBox("Se registro el Producto" + txtNombre.Text)
+            objeto.AgregarInv(txtNombre.Text, txtCantidad.Text)
+            DataGridView1.DataSource = objeto.ListardeInventario
+            MsgBox("Se registro la orden" + lblInv.Text)
 
             lblInv.Text = "-"
+            txtRestaurante.Text = ""
             txtNombre.Text = ""
             txtCantidad.Text = ""
         Catch ex As Exception
@@ -31,11 +33,12 @@ Public Class Inventario
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Try
-            obj.ModificarInv(lblInv.Text, txtNombre.Text, txtCantidad.Text)
-            DataGridView1.DataSource = obj.ListarInventario
+            objeto.ModificarProducto(lblInv.Text, txtNombre.Text, txtCantidad.Text)
+            DataGridView1.DataSource = objeto.ListardeInventario
             MsgBox("Se modifico el producto con ID" + lblInv.Text)
 
             lblInv.Text = "-"
+            txtRestaurante.Text = ""
             txtNombre.Text = ""
             txtCantidad.Text = ""
         Catch ex As Exception
@@ -45,11 +48,12 @@ Public Class Inventario
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Try
-            obj.EliminarInv(lblInv.Text)
-            DataGridView1.DataSource = obj.ListarInventario
+            objeto.EliminarProducto(lblInv.Text)
+            DataGridView1.DataSource = objeto.ListardeInventario
             MsgBox("Se elimino el producto con ID" + lblInv.Text)
 
             lblInv.Text = "-"
+            txtRestaurante.Text = ""
             txtNombre.Text = ""
             txtCantidad.Text = ""
         Catch ex As Exception
@@ -59,6 +63,7 @@ Public Class Inventario
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         lblInv.Text = "-"
+        txtRestaurante.Text = ""
         txtNombre.Text = ""
         txtCantidad.Text = ""
     End Sub

@@ -4,35 +4,31 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{53610EDC-B28C-4DEA-BD8B-5D2C2AEA0DED}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <StartupObject>Restaurante_Los_Bogavantes.My.MyApplication</StartupObject>
-    <RootNamespace>Restaurante_Los_Bogavantes</RootNamespace>
-    <AssemblyName>Restaurante Los Bogavantes</AssemblyName>
+    <ProjectGuid>{B4149299-7BB7-408B-89A1-736971C806E7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ClassLibrary3</RootNamespace>
+    <AssemblyName>ClassLibrary3</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Restaurante Los Bogavantes.xml</DocumentationFile>
+    <DocumentationFile>ClassLibrary3.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Restaurante Los Bogavantes.xml</DocumentationFile>
+    <DocumentationFile>ClassLibrary3.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -50,9 +46,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -65,30 +58,13 @@
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
     <Import Include="System.Data" />
-    <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
-    <Import Include="System.Windows.Forms" />
     <Import Include="System.Linq" />
     <Import Include="System.Xml.Linq" />
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include=".Designer.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inventario.Designer.vb">
-      <DependentUpon>Inventario.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Inventario.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Class3.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -104,46 +80,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Ordenar.Designer.vb">
-      <DependentUpon>Ordenar.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Ordenar.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RegistroEmpleados.Designer.vb">
-      <DependentUpon>RegistroEmpleados.vb</DependentUpon>
-    </Compile>
-    <Compile Include="RegistroEmpleados.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ticket.Designer.vb">
-      <DependentUpon>Ticket.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Ticket.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Inventario.resx">
-      <DependentUpon>Inventario.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ordenar.resx">
-      <DependentUpon>Ordenar.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RegistroEmpleados.resx">
-      <DependentUpon>RegistroEmpleados.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ticket.resx">
-      <DependentUpon>Ticket.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -156,36 +99,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Logo Restaurante.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\3135788.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\846047.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\5169027.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\4133479.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.vbproj">
-      <Project>{5de24dbb-a3b8-40d4-aa4e-8ab45c617b6f}</Project>
-      <Name>ClassLibrary1</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ClassLibrary2\ClassLibrary2.vbproj">
-      <Project>{82bb17e6-e70d-4d6c-86c1-a9e3f945870d}</Project>
-      <Name>ClassLibrary2</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ClassLibrary3\ClassLibrary3.vbproj">
-      <Project>{b4149299-7bb7-408b-89a1-736971c806e7}</Project>
-      <Name>ClassLibrary3</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

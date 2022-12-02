@@ -26,21 +26,21 @@ Partial Class Ordenar
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtRestaurante = New System.Windows.Forms.TextBox()
+        Me.txtMesero = New System.Windows.Forms.TextBox()
+        Me.txtMesa = New System.Windows.Forms.TextBox()
+        Me.txtMenu = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lblOrden = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.lblOrden = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtMenu = New System.Windows.Forms.TextBox()
-        Me.txtMesa = New System.Windows.Forms.TextBox()
-        Me.txtMesero = New System.Windows.Forms.TextBox()
-        Me.txtRestaurante = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -90,6 +90,97 @@ Partial Class Ordenar
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         '
+        'txtRestaurante
+        '
+        Me.txtRestaurante.Location = New System.Drawing.Point(464, 79)
+        Me.txtRestaurante.Name = "txtRestaurante"
+        Me.txtRestaurante.Size = New System.Drawing.Size(100, 29)
+        Me.txtRestaurante.TabIndex = 11
+        '
+        'txtMesero
+        '
+        Me.txtMesero.Location = New System.Drawing.Point(145, 127)
+        Me.txtMesero.Name = "txtMesero"
+        Me.txtMesero.Size = New System.Drawing.Size(147, 29)
+        Me.txtMesero.TabIndex = 10
+        '
+        'txtMesa
+        '
+        Me.txtMesa.Location = New System.Drawing.Point(145, 84)
+        Me.txtMesa.Name = "txtMesa"
+        Me.txtMesa.Size = New System.Drawing.Size(147, 29)
+        Me.txtMesa.TabIndex = 9
+        '
+        'txtMenu
+        '
+        Me.txtMenu.Location = New System.Drawing.Point(145, 40)
+        Me.txtMenu.Name = "txtMenu"
+        Me.txtMenu.Size = New System.Drawing.Size(147, 29)
+        Me.txtMenu.TabIndex = 8
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(341, 120)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(63, 22)
+        Me.Label7.TabIndex = 7
+        Me.Label7.Text = "Fecha"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(53, 127)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(79, 22)
+        Me.Label6.TabIndex = 6
+        Me.Label6.Text = "Mesero:"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(62, 87)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(61, 22)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "Mesa:"
+        '
+        'lblOrden
+        '
+        Me.lblOrden.AutoSize = True
+        Me.lblOrden.Location = New System.Drawing.Point(464, 40)
+        Me.lblOrden.Name = "lblOrden"
+        Me.lblOrden.Size = New System.Drawing.Size(16, 22)
+        Me.lblOrden.TabIndex = 4
+        Me.lblOrden.Text = "-"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(341, 79)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(117, 22)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "Restaurante:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(62, 45)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(70, 22)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Platillo:"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(365, 40)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(93, 22)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "ID Orden:"
+        '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -130,101 +221,11 @@ Partial Class Ordenar
         Me.Button4.Text = "Nueva Orden"
         Me.Button4.UseVisualStyleBackColor = True
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(365, 40)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(93, 22)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "ID Orden:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(62, 45)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(70, 22)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Platillo:"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(341, 79)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(117, 22)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Restaurante:"
-        '
-        'lblOrden
-        '
-        Me.lblOrden.AutoSize = True
-        Me.lblOrden.Location = New System.Drawing.Point(464, 40)
-        Me.lblOrden.Name = "lblOrden"
-        Me.lblOrden.Size = New System.Drawing.Size(16, 22)
-        Me.lblOrden.TabIndex = 4
-        Me.lblOrden.Text = "-"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(62, 87)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(61, 22)
-        Me.Label5.TabIndex = 5
-        Me.Label5.Text = "Mesa:"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(53, 127)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(79, 22)
-        Me.Label6.TabIndex = 6
-        Me.Label6.Text = "Mesero:"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(341, 120)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(63, 22)
-        Me.Label7.TabIndex = 7
-        Me.Label7.Text = "Fecha"
-        '
-        'txtMenu
-        '
-        Me.txtMenu.Location = New System.Drawing.Point(145, 40)
-        Me.txtMenu.Name = "txtMenu"
-        Me.txtMenu.Size = New System.Drawing.Size(147, 29)
-        Me.txtMenu.TabIndex = 8
-        '
-        'txtMesa
-        '
-        Me.txtMesa.Location = New System.Drawing.Point(145, 84)
-        Me.txtMesa.Name = "txtMesa"
-        Me.txtMesa.Size = New System.Drawing.Size(147, 29)
-        Me.txtMesa.TabIndex = 9
-        '
-        'txtMesero
-        '
-        Me.txtMesero.Location = New System.Drawing.Point(145, 127)
-        Me.txtMesero.Name = "txtMesero"
-        Me.txtMesero.Size = New System.Drawing.Size(147, 29)
-        Me.txtMesero.TabIndex = 10
-        '
-        'txtRestaurante
-        '
-        Me.txtRestaurante.Location = New System.Drawing.Point(464, 79)
-        Me.txtRestaurante.Name = "txtRestaurante"
-        Me.txtRestaurante.Size = New System.Drawing.Size(100, 29)
-        Me.txtRestaurante.TabIndex = 11
-        '
         'Ordenar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(136, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1180, 684)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
